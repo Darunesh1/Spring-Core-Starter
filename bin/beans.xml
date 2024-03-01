@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:annotation-config />
+
+
+    <!-- for constructor injection -->
+    <bean id="coning" class="com.spring.SpringConstructor">
+        <constructor-arg  value="darunesh"/>
+        <constructor-arg  value="4446" type="int"/>
+        <constructor-arg value="kk"/>
+        <constructor-arg  index="0" value="99" type="int"/>
+    </bean>
+
+    <!-- thi is example for spring scope-->
+    <bean id="scope1" class="com.spring.SpringMessage" scope="prototype">
+    </bean>
+
+    <!-- example of lifecycle -->
+    <bean id="lifecycle" class="com.spring.LifecycleExample"
+    init-method="onInitialization" destroy-method="onDestory">
+    </bean>
+
+    <!-- example of setter injection -->
+    <bean id="setterinj" class="com.spring.SetterInjection">
+        <property name="id" value="99" />
+        <property name="name" value="Darunesh"/>
+    </bean>
+
+    <!-- example of bean injection -->
+    <!-- <bean id="beaninj" class="com.spring.beaninjection.PlayInstruments">
+        <constructor-arg > -->
+            <!-- more protected and it is inside the bean 
+            so it is called bean injection -->
+            <!-- <bean id="drum" class="com.spring.beaninjection.Drum"/> 
+        </constructor-arg>
+    </bean>     -->
+    <!-- this type any can use the bean -->
+    <!-- <bean id="drum" class="com.spring.beaninjection.Drum">
+    </bean> -->
+    <!-- <bean id="piano" class="com.spring.beaninjection.Piano">
+    </bean> -->
+
+
+    <!-- example collection injection -->
+    <bean id="colinj" class="com.spring.CollectionInjection">
+        <property name="intList" >
+            <list>
+                <value>10</value>
+                <value>20</value>
+                <value>30</value>
+                <value>30</value>
+            </list>
+        </property>
+        <property name="strSet" >
+            <list>
+                <value>Darunesh</value>
+                <value>the</value>
+                <value>the</value>
+                <value>is</value>
+            </list>
+        </property>
+        <property name="strMap">
+            <map>
+                <entry key="daru" value="95" />
+                <entry key="kk" value="56"/>
+                <entry key="bandu" value="88"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- example of autowire byName -->
+    <!-- <bean id="playInstruments" class="com.spring.beaninjection.PlayInstruments"
+    autowire="byName"/>   -->
+    
+    <!-- <bean id="instruiments" class="com.spring.beaninjection.Piano"/> -->
+    <!-- <bean id="instruiments" class="com.spring.beaninjection.Drum"/> -->
+
+    <!-- example of autowire byType -->
+    <!-- <bean id="playInstruments" class="com.spring.beaninjection.PlayInstruments"
+    autowire="byType"/>
+    <bean id="paino" class="com.spring.beaninjection.Piano"  autowire-candidate="false"/>
+    <bean id="Drum" class="com.spring.beaninjection.Drum" primary="true"/> -->
+
+    
+    <!-- example bean annotation -->
+    <bean id="annotation" class="com.spring.AnnotationExample"/>
+    <bean id="paino" class="com.spring.beaninjection.Piano"  />
+    <bean id="drum" class="com.spring.beaninjection.Drum"  />
+
+
+    <!-- example of AOP programs -->
+    <bean id="aop" class="com.Asspect.AOPExample">
+        <property name="name" value="Darunesh"/>
+        <property name="id" value="20" />
+    </bean>
+    <!-- example of before advice -->
+    <bean id="bfaop" class="com.Asspect.BeforeAdviceExample"/>
+    <!-- <bean id="aopbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="aop"></property>
+        <property name="interceptorNames">
+            <list>
+                <value>bfaop</value>
+            </list>
+        </property>
+    </bean> -->
+    <!-- example of after-return -->
+    <!-- <bean id="afaop" class="com.Asspect.AfterReturnExample"/>
+    <bean id="aopbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="aop"></property>
+        <property name="interceptorNames">
+            <list>
+                <value>afaop</value>
+            </list>
+        </property>
+    </bean> -->
+
+    <!-- example of thows-advice -->
+    <bean id="thaop" class="com.Asspect.ThrowsAdvicedExample"/>
+    <bean id="aopbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="aop"/>
+        <property name="interceptorNames">
+            <list>
+                <value>thaop</value>
+            </list>
+        </property>
+    </bean>
+
+
+    
+
+    
+
+</beans>

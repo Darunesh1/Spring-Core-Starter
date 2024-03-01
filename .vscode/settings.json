@@ -1,0 +1,21 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\micrometer-commons-1.12.1.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\micrometer-observation-1.12.1.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\spring-aop-6.1.2.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\spring-beans-6.1.2.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\spring-context-6.1.2.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\spring-core-6.1.2.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\spring-expression-6.1.2.jar",
+            "c:\\Spring Jar\\jar_files 6.1.2\\spring-jcl-6.1.2.jar"
+        ],
+        "exclude": [
+            "c:\\Spring Jar\\jar_files 3.1.0\\org.springframework.context-3.1.0.release.jar"
+        ]
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
+}
