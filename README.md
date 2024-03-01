@@ -31,4 +31,32 @@ The workspace contains two folders by default, where:
 
 ## Dependency Management
 
-Download all the dependencies and add them to the classpath before running the project.
+**Download all the dependencies and add them to the classpath before running the project.**
+
+**To create a Java project in Visual Studio Code (VSCode), you can follow these steps:**
+
+1. Press Ctrl + Shift + P to open the command palette.
+2. Search for "Create Java Project" in the command palette.
+3. Select "Create Java Project" from the options provided.
+4. In the Explorer panel, you'll find the newly created Java project.
+5. Inside the project, navigate to the referenced libraries or dependencies.
+6. Add the required JAR files to the referenced libraries by copying them into the appropriate folder or by using any available configuration options provided by VSCode.
+
+
+**To set up a Java project in IntelliJ IDEA, you can follow these steps:**
+
+1. Open IntelliJ IDEA.
+2. Go to File > New > Project.
+3. Select Java from the options on the left side.
+4. Choose the appropriate SDK (Java Development Kit) if prompted.
+5. Click Next.
+6. Specify the project name and location.
+Click Finish.
+
+Once the project is created, you can add external JAR files to it:
+
+1. Locate the External Libraries section in the Project tool window.
+2. Right-click on it and select Add as Library.
+3. Choose Java if the JAR file contains Java code, or JARs or directories... if it's a generic JAR file.
+4. Navigate to the location of the JAR file on your filesystem and select it.
+5. Click OK or Apply to add the JAR file to your project.
